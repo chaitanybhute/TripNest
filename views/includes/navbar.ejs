@@ -1,0 +1,122 @@
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-md bg-body-light sticky-top">
+  <div class="container-fluid">
+
+
+<!-- Brand -->
+<a class="navbar-brand" href="/listing">
+  <i class="fa-regular fa-compass"></i>
+  <div class="brand-text-wrapper">
+    <span class="brand-text">
+      Trip<span class="brand-highlight">N</span>est
+    </span>
+    <span class="brand-tagline">Find your perfect stay</span>
+  </div>
+</a>
+
+
+    <!-- Toggler button -->
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar collapse -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <!-- Search bar -->
+      <div class="navbar-nav ms-auto d-flex align-items-center">
+        <form class="d-flex me-3" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search destinations"
+          />
+          <button class="search-btn btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+        <!-- Right side links -->
+        <div class="navbar-nav d-flex align-items-center">
+          <a class="nav-link nav-pill ms-2" href="/listing"><b>Explore</b></a>
+          <a class="nav-link nav-pill ms-2" href="/listing/new"><b>Add listing</b></a>
+
+          <% if (!currUser) { %>
+            <a class="nav-link nav-pill ms-2" href="/signup"><b>Sign up</b></a> 
+            <a class="nav-link nav-pill ms-2" href="/login"><b>Log in</b></a>
+          <% } %>
+          <% if (currUser) { %>
+            <a class="nav-link nav-pill ms-2" href="/logout"><b>Log out</b></a>
+          <% } %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Custom styles -->
+<style>
+  /* Brand */
+  .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #222;
+  }
+
+  .brand-highlight {
+    color: #fe424d; /* pinkish N */
+  }
+
+  /* Navbar shadow */
+  .navbar {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+  }
+
+  /* Pill-style links */
+  .nav-pill {
+    border: 2px solid #fe424d;
+    border-radius: 20px;
+    padding: 5px 12px;
+    transition: all 0.3s ease;
+    color: #222 !important;
+  }
+
+  .nav-pill:hover {
+    background-color: #fe424d;
+    color: white !important;
+    text-decoration: none;
+  }
+
+  /* Search bar */
+  .form-control {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 5px 12px;
+  }
+
+  .search-btn {
+    border-radius: 50%;
+    background-color: #fe424d;
+    color: white;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+  }
+
+  .search-btn:hover {
+    background-color: #e63946;
+    color: white;
+  }
+</style>

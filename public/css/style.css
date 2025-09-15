@@ -1,0 +1,154 @@
+body {
+  font-family: "Poppins", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #222;
+  background-color: #fff;
+}
+
+.container {
+  flex: 1;
+}
+
+.brand-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-tagline {
+  font-family: "Dancing Script", cursive; /* stylish cursive */
+  font-size: 0.8rem; /* smaller than brand */
+  color: #fe424d; /* matches your pink accent */
+  font-weight: 400;
+  margin-top: 2px; /* small spacing below brand name */
+}
+
+.brand-highlight {
+  color: #fe424d; /* pinkish/red color */
+}
+
+/* Style for search */
+.form-control {
+  border-radius: 30px !important;
+}
+.search-btn {
+  border-radius: 50% !important;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  border-bottom: none;
+}
+
+.nav-pill {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  color: #fe424d !important;
+  font-weight: 300;
+}
+
+.nav-pill:hover {
+  background-color: #fe424d;
+  color: #fff !important;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links {
+  width: 100%;
+}
+.f-info-social {
+  width: 100%;
+  font-size: 1.2rem;
+}
+.f-info-social i {
+  margin-right: 1rem;
+}
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-text p {
+  font-weight: 400 !important;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* New page */
+
+.Add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Edit page */
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Show page */
+.show-img {
+  height: 50vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
