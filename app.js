@@ -101,13 +101,16 @@ app.use((req, res, next) => {
 // });
 
 
-app.get('*', (req, res) => {
-  res.render('index.ejs'); // or your main EJS template
-});
+
 //routes
 app.use("/listing", listingRouter);
 app.use("/listing/:id/reviews", reviewRouter);
 app.use("/", userRouter);
+
+// Redirect all unknown routes to /listing
+app.get('*', (req, res) => {
+  res.redirect('/listing');
+});
 
 
 //Error handling Middlewere
