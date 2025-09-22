@@ -101,18 +101,14 @@ app.use((req, res, next) => {
 // });
 
 
-
+app.get('*', (req, res) => {
+  res.render('index.ejs'); // or your main EJS template
+});
 //routes
 app.use("/listing", listingRouter);
 app.use("/listing/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-// other route definitions above...
-
-// Catch-all for unhandled routes (should be last)
-app.get('*', (req, res) => {
-  res.render('index.ejs'); // or your main EJS template
-});
 
 //Error handling Middlewere
 
