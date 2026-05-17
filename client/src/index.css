@@ -1,0 +1,366 @@
+/* ============================================
+   TripNest — Global Styles
+   Bootstrap 5 is imported in main.jsx
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@600;700&family=Dancing+Script:wght@400;600&display=swap');
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #222;
+  background-color: #fff;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.tripnest-navbar {
+  background-color: #fff0f1 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  min-height: 5rem;
+  padding: 0.5rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.navbar-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #222;
+}
+
+.brand-icon {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.brand-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.brand-highlight {
+  color: #fe424d;
+}
+
+.brand-tagline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 0.8rem;
+  color: #fe424d;
+  font-weight: 400;
+}
+
+/* Search */
+.search-input {
+  border-radius: 30px !important;
+  border: 1px solid #ccc;
+  padding: 6px 16px;
+}
+
+.search-btn {
+  border-radius: 50% !important;
+  background-color: #fe424d !important;
+  border: none !important;
+  color: white !important;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.search-btn:hover {
+  background-color: #e63946 !important;
+}
+
+/* Nav pills */
+.nav-pill {
+  border: 1.5px solid #fe424d;
+  border-radius: 20px;
+  padding: 5px 14px;
+  color: #fe424d !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.nav-pill:hover,
+.nav-pill.active {
+  background-color: #fe424d;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.tripnest-footer {
+  background-color: #ebebeb;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  min-height: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.f-info-social {
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+.f-info-social i {
+  margin: 0 0.5rem;
+}
+
+.fa-square-facebook { color: #1877f2; }
+.fa-square-instagram { color: #c64f1d; }
+.fa-square-whatsapp { color: green; }
+
+.f-info-dev {
+  width: 100%;
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+}
+
+.f-info-links {
+  width: 100%;
+}
+
+.f-info-links a {
+  color: #222;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   FLASH ALERTS
+   ============================================ */
+.flash-container {
+  position: fixed;
+  top: 80px;
+  right: 1.5rem;
+  z-index: 9999;
+  min-width: 280px;
+  max-width: 380px;
+}
+
+/* ============================================
+   CATEGORY FILTERS
+   ============================================ */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  gap: 0;
+}
+
+.filter {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  opacity: 0.65;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: opacity 0.2s, color 0.2s;
+  min-width: 70px;
+  flex: 0 0 auto;
+}
+
+.filter:hover,
+.filter.active {
+  opacity: 1;
+  color: #fe424d;
+}
+
+.filter i {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ============================================
+   LISTING CARDS (Index Page)
+   ============================================ */
+.listing-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0.6rem 0 0 !important;
+}
+
+.card-img-overlay-custom {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #333;
+  pointer-events: none;
+}
+
+.listing-card:hover .card-img-overlay-custom {
+  opacity: 0.15;
+}
+
+/* ============================================
+   SHOW PAGE
+   ============================================ */
+.show-img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.show-card {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* ============================================
+   FORMS (New / Edit / Login / Signup)
+   ============================================ */
+.form-control {
+  border-radius: 10px !important;
+}
+
+.form-page-card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.btn-tripnest {
+  background-color: #fe424d !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 0.55rem 1.4rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-tripnest:hover {
+  background-color: #e63946 !important;
+}
+
+/* Star rating */
+.star-display {
+  color: #fe424d;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   REVIEWS
+   ============================================ */
+.review-card {
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fafafa;
+}
+
+/* ============================================
+   LOADING SPINNER
+   ============================================ */
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 991.98px) {
+  .tripnest-navbar { min-height: auto; padding: 0.5rem 0.75rem; }
+  .card-img-top { height: 16rem; }
+  #filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
+  #filters::-webkit-scrollbar { height: 4px; }
+  #filters::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+  .filter { flex: 0 0 auto; }
+}
+
+@media (max-width: 767.98px) {
+  .brand-text { font-size: 1.2rem; }
+  .brand-icon { font-size: 1.6rem; }
+  .brand-tagline { font-size: 0.65rem; }
+  .card-img-top { height: 14rem; }
+  .show-img { height: 35vh; }
+  .filter { min-width: 60px; font-size: 0.72rem; }
+}
+
+@media (max-width: 480px) {
+  .brand-text { font-size: 1rem; }
+  .brand-icon { font-size: 1.4rem; }
+  .card-img-top { height: 12rem; }
+  .show-img { height: 28vh; }
+  .filter { min-width: 55px; font-size: 0.65rem; }
+}

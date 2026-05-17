@@ -18,15 +18,15 @@ body {
 }
 
 .brand-tagline {
-  font-family: "Dancing Script", cursive; /* stylish cursive */
-  font-size: 0.8rem; /* smaller than brand */
-  color: #fe424d; /* matches your pink accent */
+  font-family: "Dancing Script", cursive;
+  font-size: 0.8rem;
+  color: #fe424d;
   font-weight: 400;
-  margin-top: 2px; /* small spacing below brand name */
+  margin-top: 2px;
 }
 
 .brand-highlight {
-  color: #fe424d; /* pinkish/red color */
+  color: #fe424d;
 }
 
 /* Style for search */
@@ -37,11 +37,14 @@ body {
   border-radius: 50% !important;
 }
 
+/* Navbar */
 .navbar {
-  height: 5rem;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  height: auto;
+  min-height: 5rem;
+  background-color: #fff0f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-bottom: none;
+  padding: 0.5rem 1rem;
 }
 
 .nav-pill {
@@ -68,6 +71,7 @@ body {
   color: #222222 !important;
 }
 
+/* Footer */
 .f-info-links a {
   text-decoration: none;
   color: #222222;
@@ -88,12 +92,22 @@ body {
 }
 .f-info {
   text-align: center;
-  height: 8rem;
+  height: auto;
+  min-height: 8rem;
+  padding: 1.5rem 1rem;
   background-color: #ebebeb;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: space-evenly;
+  align-items: center;
+}
+
+.f-info-dev {
+  width: 100%;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.25rem;
+  font-style: italic;
 }
 
 /* Cards */
@@ -127,7 +141,6 @@ body {
 }
 
 /* New page */
-
 .Add-btn {
   background-color: #fe424d !important;
   border: none !important;
@@ -146,9 +159,281 @@ body {
 
 .btns {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .show-card {
   padding-left: 0;
   padding-right: 0;
+}
+
+/* ========================= */
+/* RESPONSIVE / MOBILE STYLES */
+/* ========================= */
+
+/* Tablets and below (max-width: 991px) */
+@media (max-width: 991.98px) {
+  .navbar {
+    min-height: auto;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Navbar collapse - stack items vertically */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+
+  .navbar-nav .d-flex {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-nav form.d-flex {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    margin-right: 0 !important;
+  }
+
+  .navbar-nav form.d-flex input {
+    flex: 1;
+  }
+
+  .nav-pill {
+    margin: 4px 0;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .navbar-nav .navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* Filters - scrollable horizontally */
+  #filters {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+  }
+
+  #filters::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  #filters::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+
+  .filter {
+    flex: 0 0 auto;
+    min-width: 70px;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+
+  /* Cards grid - 2 columns on tablet */
+  .row-cols-lg-3 {
+    --bs-gutter-x: 1rem;
+  }
+
+  /* Show page - wider on tablet */
+  .show-card.col-6 {
+    width: 83.33% !important;
+  }
+
+  .title.col-8 {
+    width: 83.33% !important;
+  }
+
+  .title.col-8.offset-3,
+  .show-card.col-6.offset-3 {
+    margin-left: 8.33% !important;
+  }
+
+  .show-img {
+    height: 40vh;
+  }
+
+  /* Edit/New forms - wider */
+  .col-8.offset-2 {
+    width: 90% !important;
+    margin-left: 5% !important;
+  }
+
+  /* Review cards */
+  .card.col-5 {
+    width: 45% !important;
+  }
+}
+
+/* Mobile phones (max-width: 767px) */
+@media (max-width: 767.98px) {
+  /* Navbar adjustments */
+  .navbar {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+
+  .fa-compass {
+    font-size: 1.6rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.65rem;
+  }
+
+  /* Search bar full width */
+  .navbar-nav form.d-flex {
+    flex-direction: row;
+  }
+
+  /* Nav pills row */
+  .navbar-nav .navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .nav-pill {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin: 3px 2px;
+  }
+
+  /* Filters */
+  .filter {
+    min-width: 60px;
+    margin-left: 0.4rem !important;
+    margin-right: 0.4rem !important;
+    margin-top: 1rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  /* Cards - single column on mobile */
+  .row-cols-md-3 > * {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .card-img-top {
+    height: 15rem !important;
+  }
+
+  .listing-card {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Show page - full width on mobile */
+  .show-card.col-6 {
+    width: 100% !important;
+  }
+
+  .title.col-8 {
+    width: 100% !important;
+  }
+
+  .title.col-8.offset-3,
+  .show-card.col-6.offset-3 {
+    margin-left: 0 !important;
+  }
+
+  .show-img {
+    height: 30vh;
+  }
+
+  /* Edit/New forms - full width */
+  .col-8.offset-2 {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* Buttons */
+  .btns {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .btns .btn {
+    width: auto !important;
+    flex: none;
+  }
+
+  .btns .edit-btn.col-1 {
+    width: auto !important;
+  }
+
+  /* Review cards - full width */
+  .card.col-5 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Footer */
+  .f-info {
+    padding: 1rem 0.75rem;
+    min-height: auto;
+  }
+
+  .f-info-social {
+    font-size: 1rem;
+  }
+
+  .f-info-dev {
+    font-size: 0.75rem;
+  }
+
+  /* Container padding on mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Very small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1rem !important;
+  }
+
+  .fa-compass {
+    font-size: 1.4rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.6rem;
+  }
+
+  .nav-pill {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .card-img-top {
+    height: 12rem !important;
+  }
+
+  .show-img {
+    height: 25vh;
+  }
+
+  .filter {
+    min-width: 55px;
+    font-size: 0.65rem !important;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
 }
